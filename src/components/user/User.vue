@@ -47,7 +47,7 @@
               icon="el-icon-delete"
               size="mini"
               circle
-              @click="removeUserById(scoped.row.id)"
+              @click="removeUserById(scope.row.id)"
             ></el-button>
             <el-tooltip
               class="item"
@@ -56,7 +56,13 @@
               :enterable="false"
               placement="top"
             >
-              <el-button type="info" icon="el-icon-setting" size="mini" circle></el-button>
+              <el-button
+                type="warning"
+                icon="el-icon-setting"
+                size="mini"
+                circle
+                @click="showSetRole(scope.row)"
+              ></el-button>
             </el-tooltip>
           </template>
         </el-table-column>
@@ -66,12 +72,13 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="queryInfo.pagenum"
-        :page-sizes="[1, 2, 5, 10]"
+        :page-sizes="[2, 5, 10, 15]"
         :page-size="queryInfo.pagesize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="10"
       ></el-pagination>
     </el-card>
+
     <!-- 添加用户的对话框 -->
     <el-dialog title="添加用户" :visible.sync="addDialogVisible" width="50%" @close="addDialogClosed">
       <!-- 内容主体 -->
@@ -99,6 +106,7 @@
         <el-button type="primary" @click="addUser">确 定</el-button>
       </span>
     </el-dialog>
+
     <!-- 修改用户的对话框 -->
     <el-dialog
       title="修改用户信息"
@@ -126,6 +134,35 @@
       <span slot="footer" class="dialog-footer">
         <el-button @click="editDialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="editUser">确 定</el-button>
+      </span>
+    </el-dialog>
+
+    <!-- 分配角色对话框 -->
+    <el-dialog title="分配角色" :visible.sync="setRoleDialogVisible" width="50%" @close="setRoleDialogClosed">
+      <div>
+        <p>当前用户：{{userInfo.username}}</p>
+        <p>当前角色：{{userInfo.role_name}}</p>
+        <p>
+          分配角色：
+          <el-select
+            v-model="selectRoleId"
+            filterable
+            allow-create
+            default-first-option
+            placeholder="请选择文章标签"
+          >
+            <el-option
+              v-for="item in rolesLsit"
+              :key="item.id"
+              :label="item.roleName"
+              :value="item.id"
+            ></el-option>
+          </el-select>
+        </p>
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="setRoleDialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="saveRoleInfo">确 定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -159,7 +196,7 @@ export default {
         // 当前页数
         pagenum: 1,
         // 每页显示多少数据
-        pagesize: 2
+        pagesize: 5
       },
       userlist: [],
       totle: 0,
@@ -204,6 +241,7 @@ export default {
       // 修改用户
       editDialogVisible: false,
       editUserForm: {},
+      // 编辑用户表单验证
       editUserFormRules: {
         email: [
           { required: true, message: '请输入邮箱', trigger: 'blur' },
@@ -213,7 +251,15 @@ export default {
           { required: true, message: '请输入手机号码', trigger: 'blur' },
           { validator: checkMobile, trigger: 'blur' }
         ]
-      }
+      },
+      // 分配角色对话框
+      setRoleDialogVisible: false,
+      // 当前需要被分配角色的用户
+      userInfo: {},
+      // 所有角色数据列表
+      rolesLsit: [],
+      // 已选中的角色Id值
+      selectRoleId: ''
     }
   },
   created () {
@@ -267,7 +313,7 @@ export default {
         // 表单预校验失败
         if (!valid) return
         const { data: res } = await this.$http.post('users', this.addUserForm)
-        if (res.meta.ststus !== 200) {
+        if (res.meta.status !== 200) {
           this.$message.error('添加用户失败！')
         }
         this.$message.success('添加用户成功！')
@@ -279,7 +325,9 @@ export default {
     // 编辑用户信息
     async showEditDialog (id) {
       const { data: res } = await this.$http.get('users/' + id)
-      // if (res.meta.ststus !== 200) return this.$message.error('查询用户信息失败！')
+      if (res.meta.status !== 200) {
+        return this.$message.error('查询用户信息失败！')
+      }
       this.editUserForm = res.data
       this.editDialogVisible = true
     },
@@ -310,21 +358,55 @@ export default {
         this.getUserList()
       })
     },
+    // 删除用户
     async removeUserById (id) {
-      const confirmResult = await this.$confirm('此操作将永久删除该用户, 是否继续?', '提示', {
-        confirmButtonText: '确定',
-        cancelButtonText: '取消',
-        type: 'warning'
-      }).catch(err => err)
+      const confirmResult = await this.$confirm(
+        '此操作将永久删除该用户, 是否继续?',
+        '提示',
+        {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }
+      ).catch(err => err)
       // 点击确定 返回值为：confirm
       // 点击取消 返回值为： cancel
       if (confirmResult !== 'confirm') {
-        this.$message.info('已取消删除')
+        return this.$message.info('已取消删除')
       }
       const { data: res } = await this.$http.delete('users/' + id)
       if (res.meta.status !== 200) return this.$message.error('删除用户失败！')
       this.$message.success('删除用户成功！')
       this.getUserList()
+    },
+    // 展示分配角色的对话框
+    async showSetRole (role) {
+      this.userInfo = role
+      // 展示对话框之前，获取所有角色列表
+      const { data: res } = await this.$http.get('roles')
+      if (res.meta.status !== 200) {
+        return this.$message.error('获取角色列表失败！')
+      }
+      this.rolesLsit = res.data
+      this.setRoleDialogVisible = true
+    },
+    // 分配角色
+    async saveRoleInfo () {
+      if (!this.selectRoleId) {
+        return this.$message.error('请选择要分配的角色')
+      }
+      const { data: res } = await this.$http.put(`users/${this.userInfo.id}/role`, { rid: this.selectRoleId })
+      if (res.meta.status !== 200) {
+        return this.$message.error('更新用户角色失败！')
+      }
+      this.$message.success('更新角色成功！')
+      this.getUserList()
+      this.setRoleDialogVisible = false
+    },
+    // 分配角色对话框关闭事件
+    setRoleDialogClosed () {
+      this.selectRoleId = ''
+      this.userInfo = {}
     }
   }
 }
