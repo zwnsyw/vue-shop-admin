@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 面包屑导航区 -->
-    <el-breadcrumb separator="/">
+    <el-breadcrumb separator-class="el-icon-arrow-right">
       <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>用户管理</el-breadcrumb-item>
       <el-breadcrumb-item>用户列表</el-breadcrumb-item>
@@ -279,19 +279,19 @@ export default {
     },
     // 监听 pagesize改变的事件
     handleSizeChange (newSize) {
-      console.log(newSize)
+      // console.log(newSize)
       this.queryInfo.pagesize = newSize
       this.getUserList()
     },
     // 监听 页码值 改变事件
     handleCurrentChange (newSize) {
-      console.log(newSize)
+      // console.log(newSize)
       this.queryInfo.pagenum = newSize
       this.getUserList()
     },
     // 监听 switch开关 状态改变
     async userStateChanged (userInfo) {
-      console.log(userInfo)
+      // console.log(userInfo)
       const { data: res } = await this.$http.put(
         `users/${userInfo.id}/state/${userInfo.mg_state}`
       )
@@ -313,7 +313,7 @@ export default {
         // 表单预校验失败
         if (!valid) return
         const { data: res } = await this.$http.post('users', this.addUserForm)
-        if (res.meta.status !== 200) {
+        if (res.meta.status !== 201) {
           this.$message.error('添加用户失败！')
         }
         this.$message.success('添加用户成功！')
