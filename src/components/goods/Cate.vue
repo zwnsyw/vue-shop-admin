@@ -77,6 +77,7 @@
             @change="parentCateChanged"
             clearable
             filterable
+            style="width: 100%"
           ></el-cascader>
         </el-form-item>
       </el-form>
