@@ -38,38 +38,38 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
-![welcome](https://gitee.com/wBekvam/vue-shop-admin/截图\welcome.png)
+![welcome](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/welcome.png)
 
 
 
-![user]((https://gitee.com/wBekvam/vue-shop-admin/截图/user.png)
+![user](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/user.png)
 
 
 
-![user1](https://gitee.com/wBekvam/vue-shop-admin/截图/user1.png)
+![user1](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/user1.png)
 
 
 
-![role](https://gitee.com/wBekvam/vue-shop-admin/截图/role.png)
+![role](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/role.png)
 
 
 
-![auth](https://gitee.com/wBekvam/vue-shop-admin/截图/auth.png)
+![auth](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/auth.png)
 
 
-![goods](https://gitee.com/wBekvam/vue-shop-admin/截图/goods.png)
+![goods](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/goods.png)
 
 
-![params](https://gitee.com/wBekvam/vue-shop-admin/截图/params.png)
+![params](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/params.png)
 
 
-![addGoods](https://gitee.com/wBekvam/vue-shop-admin/截图/addGoods.png)
+![addGoods](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/addGoods.png)
 
 
-![addGoods1](https://gitee.com/wBekvam/vue-shop-admin/截图/addGoods1.png)
+![addGoods1](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/addGoods1.png)
 
 
-![data](https://gitee.com/wBekvam/vue-shop-admin/截图/data.png)
+![data](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/data.png)
 
 
-![data](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\data.png)
+![data](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/data.png)
