@@ -56,7 +56,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ![auth](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/auth.png)
 
 
-![goods](https://gitee.com/wBekvam/vue-shop-admin/raw/master/iamge/goods.png)
+![goods](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/goods.png)
 
 
 ![params](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/params.png)
