@@ -1,3 +1,9 @@
+
+
+
+
+
+
 # vue_shop_admin
 
 ## Project setup
@@ -30,34 +36,38 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Project preview
 
-![welcome](D:\Vue-Administrator\vue-shop-admin\截图\welcome.png)
-
-![user](D:\Vue-Administrator\vue-shop-admin\截图\user.png)
 
 
+![welcome](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\welcome.png)
 
-![role](D:\Vue-Administrator\vue-shop-admin\截图\role.png)
+![user](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\user.png)
 
 
 
-![auth](D:\Vue-Administrator\vue-shop-admin\截图\auth.png)
+![user1](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\user1.png)
 
 
 
-![addGoods](D:\Vue-Administrator\vue-shop-admin\截图\addGoods.png)
+![role](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\role.png)
 
 
 
-![addGoods1](D:\Vue-Administrator\vue-shop-admin\截图\addGoods1.png)
+![auth](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\auth.png)
 
 
 
-![cat](D:\Vue-Administrator\vue-shop-admin\截图\cat.png)
+
+
+![goods](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\goods.png)![params](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\params.png)
 
 
 
-![orders](D:\Vue-Administrator\vue-shop-admin\截图\orders.png)
+![addGoods](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\addGoods.png)
 
 
 
-![data](D:\Vue-Administrator\vue-shop-admin\截图\data.png)
+![addGoods1](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\addGoods1.png)
+
+![data](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\data.png)
+
+![data](D:\Vue-Administrator\vue-shop-admin\vue_shop_admin\截图\data.png)
