@@ -275,7 +275,6 @@ export default {
       }
       this.userlist = res.data.users
       this.totle = res.data.totle
-      console.log(res)
     },
     // 监听 pagesize改变的事件
     handleSizeChange (newSize) {
