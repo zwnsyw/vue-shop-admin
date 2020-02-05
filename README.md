@@ -70,5 +70,3 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ![data](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/data.png)
 
-
-![data](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/data.png)
