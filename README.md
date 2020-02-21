@@ -85,6 +85,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ![welcome](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/welcome.png)
 
 
+![welcome](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/login.png)
+
+
 ![user](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/user.png)
 
 
