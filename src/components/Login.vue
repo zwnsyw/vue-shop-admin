@@ -7,7 +7,13 @@
       </div>
       <!-- 登录表单 -->
       <div>
-        <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="60px" class="login_form">
+        <el-form
+          ref="loginFormRef"
+          :model="loginForm"
+          :rules="loginFormRules"
+          label-width="60px"
+          class="login_form"
+        >
           <el-form-item label="账号" prop="username">
             <el-input v-model="loginForm.username" prefix-icon="iconfont icon-user"></el-input>
           </el-form-item>
@@ -18,6 +24,10 @@
               prefix-icon="iconfont icon-3702mima"
             ></el-input>
           </el-form-item>
+          <div class="info">
+            <span>用户名：admin</span>
+            <span style="margin-left: 20px">密码：123456</span>
+          </div>
           <el-form-item class="btns">
             <el-button type="primary" @click="login">登录</el-button>
             <el-button type="info" @click="resetLoginForm">重置</el-button>
@@ -127,5 +137,9 @@ export default {
 .btns {
   display: flex;
   justify-content: center;
+}
+.info {
+  font-size: 13px;
+  margin: 10px 15px;
 }
 </style>

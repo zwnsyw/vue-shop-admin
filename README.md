@@ -60,9 +60,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
    10. core: 跨域请求
 
-       #### 后端：
+#### 	后端：
 
-       主要通过Node.js + MySQL提供API接口
+    主要通过Node.js + MySQL提供API接口
+    
 
 ### 功能：
 
