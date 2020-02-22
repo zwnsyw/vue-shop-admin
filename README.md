@@ -35,6 +35,12 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
+###注意
+   该项目为前后端分离项目的纯前端，所有数据均来自后端接口数据（本地服务器）
+   后端接口数据在另一个代码仓库，有需要的自行下载（https://gitee.com/wBekvam/vueShop-api-server）
+
+
+
 
 ### 技术:
 
