@@ -40,7 +40,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
    接口文档：[https://gitee.com/wBekvam/vue-shop-admin/blob/master/api%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.md](https://gitee.com/wBekvam/vue-shop-admin/blob/master/api接口文档.md)
 
-   后端接口数据在另一个代码仓库，有需要的自行下载（https://gitee.com/wBekvam/vueShop-api-server）
+   后端接口数据在另一个代码仓库，有需要的自行下载（https://gitee.com/wBekvam/vueShop-api-server.git）
 
 
 
