@@ -24,10 +24,6 @@
               prefix-icon="iconfont icon-3702mima"
             ></el-input>
           </el-form-item>
-          <div class="info">
-            <span>用户名：admin</span>
-            <span style="margin-left: 20px">密码：123456</span>
-          </div>
           <el-form-item class="btns">
             <el-button type="primary" @click="login">登录</el-button>
             <el-button type="info" @click="resetLoginForm">重置</el-button>
