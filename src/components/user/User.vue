@@ -200,7 +200,7 @@ export default {
       },
       userlist: [],
       totle: 0,
-      // 添加用于对话框
+      // 添加用户对话框
       addDialogVisible: false,
       // 用户添加
       addUserForm: {
