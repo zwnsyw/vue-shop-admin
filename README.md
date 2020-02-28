@@ -12,7 +12,7 @@
 
 
 
-![](C:/Users/HZ/Desktop/vue-mall-master/src/assets/mall_desc01.png)
+![](https://gitee.com/wBekvam/vue-shop-admin/blob/master/image/mall_desc01.png)
 
 
 
@@ -20,7 +20,7 @@
 
 > 电商后台管理系统整体采用前后端分离的开发模式,其中前端项目是基于Vue技术栈的SPA项目
 
-![](C:/Users/HZ/Desktop/vue-mall-master/src/assets/mall_desc02.png)
+![](https://gitee.com/wBekvam/vue-shop-admin/blob/master/image/mall_desc02.png)
 
 ### 技术选型
 
