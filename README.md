@@ -20,7 +20,7 @@
 
 > 电商后台管理系统整体采用前后端分离的开发模式,其中前端项目是基于Vue技术栈的SPA项目
 
-![](https://gitee.com/wBekvam/vue-shop-admin/blob/master/image/mall_desc02.png)
+![](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/mall_desc02.png)
 
 ### 技术选型
 
@@ -44,7 +44,7 @@
 
 - Sequelize
 
-  ##### [接口文档](https://gitee.com/wBekvam/vue-shop-admin/blob/master/api%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.md).
+  ##### [接口文档](https://gitee.com/wBekvam/vue-shop-admin/raw/master/api%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.md).
 
   后端源码  [下载](https://gitee.com/wBekvam/vueShop-api-server.git).
 
