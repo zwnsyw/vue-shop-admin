@@ -12,8 +12,7 @@
 
 
 
-![](https://gitee.com/wBekvam/vue-shop-admin/blob/master/image/mall_desc01.png)
-
+![](https://gitee.com/wBekvam/vue-shop-admin/raw/master/image/mall_desc01.png)
 
 
 ### 开发模式
